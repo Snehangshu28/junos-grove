@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './HeroSection.css';
 import jungleBg from '../assets/Background3.svg';
 import leftImage from '../assets/left.png';
-import rightImage from '../assets/Right.png';
+import rightImage from '../assets/right.png';
 import footerImage from '../assets/footer.png';
 
 export default function HeroSection() {
