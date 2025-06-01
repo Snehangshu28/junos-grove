@@ -12,19 +12,24 @@ import NewsletterSignup from './components/NewsletterSignup'
 import FAQAccordion from './components/FAQAccordion'
 import Footer from './components/Footer'
 import jungleBg from './assets/Background2.svg' // Import your background image
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div
       style={{
         minHeight: '100vh',
-        width: '100vw',
+        width: '100%',
+        maxWidth: '100%',
         background:"rgba(5, 23, 20, 1)",
+        overflow: 'hidden', 
+        position: 'relative',
         fontFamily: 'sans-serif',
         display: 'flex',
         flexDirection: 'column',
       }}
     >
+      {/* <Navbar /> */}
       <HeroSection />
       <CryptoUpdates />
       <PortfolioSection />

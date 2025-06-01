@@ -13,6 +13,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: 'Valky';
+  src: url('./assets/TTF/ValkyRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 a {
   font-weight: 500;
@@ -25,10 +31,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1 {
