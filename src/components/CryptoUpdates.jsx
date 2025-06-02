@@ -1,6 +1,9 @@
 import React from 'react';
 import chartVideo from '../assets/chartPreview.mp4';
 import jungleBg from '../assets/Left.png';
+import portfolioIcon from '../assets/icon/portfolio.png';
+import vaultIcon from '../assets/icon/vault.png';
+import mobileIcon from '../assets/icon/mobile.png';
 
 const coins = [
   { title: 'Highest volume', name: 'Bitcoin', price: '693475 USD', icon: 'bitcoin.png' },
@@ -42,7 +45,7 @@ export default function CryptoLandingPage() {
       {/* Top Crypto Section */}
       <div style={{
         position: 'relative',
-        padding: '3rem 1rem',
+        padding: '5.9rem 1rem',
         textAlign: 'center',
         zIndex: 1,
       }}>
@@ -108,32 +111,44 @@ export default function CryptoLandingPage() {
         {/* Right - Text Content */}
         <div style={{ flex: 1, color: '#fff', textAlign:'left', display: 'flex', justifyContent:'space-between', flexDirection: 'column', gap: '0.2rem' }}>
           <p style={{ color: 'white', fontSize: '1.2rem' }}>Crypto landing page <span style={{ color: '#10b981' }}>template</span></p>
-          <h2 style={{ fontSize: '3.0rem', fontWeight: 'bold' }}>
+          <h2 style={{ fontSize: '3.0rem', fontWeight: 'bold', fontFamily: `"DM Sans"` }}>
             Create your cryptocurrency portfolio today
           </h2>
-          <p style={{ fontSize: '1rem', color: '#d1d5db' }}>
+          <p style={{ fontSize: '1rem', color: 'rgb(209 213 219 / 60%)' }}>
             Coinbase has a variety of features that make it the best place to start trading.
           </p>
 
-          <ul style={{ listStyle: 'none', padding: 0, marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {['Manage your portfolio', 'Vault protection', 'Mobile apps'].map((text, i) => (
-              <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <span style={{
-                  background: '#1f2937',
-                  padding: '0.5rem',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: '2rem',
-                  height: '2rem',
-                }}>
-                  ✅
-                </span>
-                <span style={{ fontSize: '1rem' }}>{text}</span>
-              </li>
-            ))}
-          </ul>
+          <ul style={{ listStyle: 'none', padding: 0, marginTop: '1.6rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+  {[
+    { text: 'Manage your portfolio', icon: portfolioIcon },
+    { text: 'Vault protection', icon: vaultIcon },
+    { text: 'Mobile apps', icon: mobileIcon },
+  ].map((item, i) => (
+    <li key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.3rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1.3rem', marginBottom: '0.6rem' }}>
+        <span style={{
+          background: '#1f2937',
+          borderRadius: '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '3rem',
+          height: '3rem',
+        }}>
+          <img src={item.icon} alt="" style={{ width: '3rem', height: '3rem' }} />
+        </span>
+        <span style={{ fontSize: '1.6rem', fontFamily: `"DM Sans", sans-serif' `}}>{item.text}</span>
+      </div>
+      <div style={{
+        width: '100%',
+        height: '3px',
+        background: 'rgba(255, 255, 255, 0.1)',
+        borderRadius: '2px',
+        marginTop: '0.2rem'
+      }} />
+    </li>
+  ))}
+</ul>
         </div>
       </div>
     </section>

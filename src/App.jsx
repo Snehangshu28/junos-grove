@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeroSection from './components/HeroSection'
 import CryptoUpdates from './components/CryptoUpdates'
-import PortfolioSection from './components/PortfolioSection'
 import AppPreview from './components/AppPreview'
 import FeaturesSection from './components/FeaturesSection'
 import Leaderboard from './components/Leaderboard'
@@ -32,7 +31,6 @@ function App() {
       {/* <Navbar /> */}
       <HeroSection />
       <CryptoUpdates />
-      <PortfolioSection />
       <AppPreview />
       <FeaturesSection />
       <Leaderboard />

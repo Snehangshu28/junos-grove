@@ -47,7 +47,7 @@ export default function Navbar() {
       </div>
 
       {/* Navigation Links */}
-      <div style={{ display: 'flex', alignItems:'center', gap: '1rem', fontSize: '0.9rem' }}>
+      <div style={{ display: 'flex', alignItems:'center', gap: '1.5rem', fontSize: '0.8rem' }}>
         {['Watchtower', 'Juno’s Grove', 'Treasure Map', 'Pricing'].map((item) => (
           <a
             key={item}
