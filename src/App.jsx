@@ -12,32 +12,19 @@ import FAQAccordion from './components/FAQAccordion';
 import Footer from './components/Footer';
 import jungleBg from './assets/Background2.svg'; // Import your background image
 import Navbar from './components/Navbar';
+import Home from './page/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import WatchtowerPage from './page/WatchtowerPage';
 
 function App() {
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        width: '100%',
-        maxWidth: '100%',
-        background: 'rgba(5, 23, 20, 1)',
-        overflow: 'hidden',
-        position: 'relative',
-        fontFamily: 'sans-serif',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      {/* <Navbar /> */}
-      <HeroSection />
-      <CryptoUpdates />
-      <AppPreview />
-      {/* <FeaturesSection /> */}
-      <Leaderboard />
-      {/* <NewsletterSignup /> */}
-      <FAQAccordion />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/watchtower" element={<WatchtowerPage />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { FaCog } from 'react-icons/fa'; // FontAwesome settings icon
 import { FaUserCircle } from 'react-icons/fa'; // Profile/Notification icon
 import logoIcon from '../assets/icon/favicon.ico';
 import groupIcon from '../assets/icon/Group.png';
 import navIcon from '../assets/icon/Icon.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
   return (
@@ -32,6 +34,7 @@ export default function Navbar() {
             fontWeight: 'bold',
             fontSize: '1.2rem',
           }}
+          onClick={() => navigate('/')}
         >
           <img
             src={logoIcon}
@@ -56,21 +59,25 @@ export default function Navbar() {
             fontSize: '0.8rem',
           }}
         >
-          {['Watchtower', 'Juno’s Grove', 'Treasure Map', 'Pricing'].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none',
-                  fontWeight: '500',
-                }}
-              >
-                {item}
-              </a>
-            )
-          )}
+          {[
+            { label: 'Watchtower', path: '/watchtower' },
+            { label: 'Juno’s Grove', path: '/junos-grove' },
+            { label: 'Treasure Map', path: '/treasure-map' },
+            { label: 'Pricing', path: '/pricing' },
+          ].map((item) => (
+            <div
+              key={item}
+              href="#"
+              style={{
+                color: 'white',
+                textDecordivtion: 'none',
+                fontWeight: '500',
+              }}
+              onClick={() => navigate(item.path)}
+            >
+              {item.label}
+            </div>
+          ))}
           <img
             src={navIcon}
             alt="nav icon"
