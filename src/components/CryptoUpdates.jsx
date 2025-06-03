@@ -130,7 +130,7 @@ export default function CryptoLandingPage() {
                 {coin.title}
               </p>
               <img
-                src={`../assets/icon/bitcoin.png`}
+                src={`../assets/icon/${coin.icon}`}
                 alt={coin.name}
                 style={{ width: '20px', height: '20px' }}
               />

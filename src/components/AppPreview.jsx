@@ -1,6 +1,6 @@
 import React from 'react';
 import mobileVideo from '../assets/mobilePreview.mp4';
-import mobileVideoBack from '../assets/img.png';
+import mobileVideoBack from '../assets/img2.png';
 import rightImg from '../assets/Right.png';
 import groupImg from '../assets/Group.png';
 import bitcoin from '../assets/icon/bitcoin.png';
@@ -89,9 +89,9 @@ export default function AppPreview() {
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            width: '50%',
-            height: '100vh',
-            zIndex: 0.5,
+            width: '87%',
+            height: '116vh',
+            zIndex: 1,
             opacity: 1.9, // adjust as needed
             pointerEvents: 'none', // optional: blur for effect
           }}
@@ -115,8 +115,8 @@ export default function AppPreview() {
             muted
             loop
             style={{
-              width: '55vw',
-              height: '90vh',
+              width: '41vw',
+              height: '100vh',
               borderRadius: '2rem',
               objectFit: 'cover',
               boxShadow: '0 0 20px rgba(0,0,0,0.5)',
