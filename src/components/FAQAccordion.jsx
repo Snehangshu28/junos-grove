@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import faqLeftImg from '../assets/Left.png'; // <-- Add your image path
 
 const faqs = [
   {
@@ -34,27 +35,76 @@ export default function FAQAccordion() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <h3
+      <div
         style={{
-          color: 'white',
-          fontSize: '1.3rem',
-          fontWeight: 700,
-          marginBottom: 24,
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          // height: '100%',
+          background: 'rgb(0 0 0 / 62%)', // Adjust opacity as needed
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      />
+      {/* Left PNG */}
+      <img
+        src={faqLeftImg}
+        alt="faq decor"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '100%',
+          zIndex: 0,
+          objectFit: 'cover',
+        }}
+      />
+
+      {/* Heading */}
+      <div
+        style={{
+          textAlign: 'center',
+          padding: '4rem 1rem 2rem',
+          position: 'relative', // required for zIndex to work
+          zIndex: 3,
+          marginBottom: '2rem',
+          // backgroundColor: '#0a1e19',
         }}
       >
-        Learn more about Juno's
-      </h3>
-      <div style={{ width: '100%', maxWidth: 700 }}>
+        <h5
+          style={{ color: '#eaffd0', fontSize: '1rem', marginBottom: '0.5rem' }}
+        >
+          Popular{' '}
+          <span style={{ color: 'rgba(153, 227, 158, 1)' }}>questions</span>
+        </h5>
+        <h2 style={{ color: 'white', fontSize: '3rem' }}>
+          Learn more about Juno’s
+        </h2>
+        <p style={{ fontSize: '1rem', color: 'rgb(209 213 219 / 60%)' }}>
+          We accept 100+ cryptocurrencies around the world
+        </p>
+      </div>
+      <div
+        style={{
+          width: '80%',
+          zIndex: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.7rem',
+        }}
+      >
         {faqs.map((faq, i) => (
           <div
             key={i}
             style={{
               marginBottom: 12,
               background: 'rgba(20, 40, 35, 1)',
-              borderRadius: 10,
-              overflow: 'hidden',
+              borderRadius: 20,
+              // overflow: 'hidden',
               boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
             }}
           >
@@ -70,6 +120,7 @@ export default function FAQAccordion() {
                 fontSize: '1.1rem',
                 padding: '1rem 1.5rem',
                 cursor: 'pointer',
+                height: '12vh',
                 outline: 'none',
                 borderBottom:
                   open === i ? '1px solid #4ade80' : '1px solid #222',
@@ -84,9 +135,19 @@ export default function FAQAccordion() {
                   padding: '1rem 1.5rem',
                   color: '#a7f3d0',
                   background: '#1a2a23',
+                  display: 'flex',
                 }}
               >
-                {faq.a}
+                <span>{faq.a}</span>
+                <span
+                  style={{
+                    color: 'white',
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                  }}
+                >
+                  +
+                </span>
               </div>
             )}
           </div>
