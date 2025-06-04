@@ -65,7 +65,7 @@ export default function Navbar() {
             { label: 'Watchtower', path: '/watchtower' },
             { label: 'Juno’s Grove', path: '/junos-grove' },
             { label: 'Treasure Map', path: '/treasure-map' },
-            { label: 'Pricing', path: '/pricing' },
+            { label: 'Pricing', path: '/' },
           ].map((item) => (
             <div
               key={item.label}

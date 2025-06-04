@@ -15,6 +15,7 @@ import Navbar from './components/Navbar';
 import Home from './page/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import WatchtowerPage from './page/WatchtowerPage';
+import TreasureMapPage from './page/TreasureMapPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/watchtower" element={<WatchtowerPage />} />
+        <Route path="/treasure-map" element={<TreasureMapPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
