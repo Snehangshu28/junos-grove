@@ -1,13 +1,12 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
 import WatchTowerHeroSection from '../components/WatchTowerHeroSection';
+import CoinPreview from '../components/CoinPreview';
 
 function WatchtowerPage() {
   return (
     <div
       style={{
-        minHeight: '100vh',
+        minHeight: '113vh',
         width: '100%',
         maxWidth: '100%',
         background: 'rgba(5, 23, 20, 1)',
@@ -19,6 +18,7 @@ function WatchtowerPage() {
       }}
     >
       <WatchTowerHeroSection />
+      <CoinPreview />
     </div>
   );
 }

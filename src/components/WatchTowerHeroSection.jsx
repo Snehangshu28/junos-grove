@@ -20,7 +20,7 @@ export default function WatchTowerHeroSection() {
     backgroundImage: `url(${jungleBg})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
+    height: '114vh',
     width: '100%',
     position: 'relative',
     overflow: 'hidden',
@@ -41,7 +41,7 @@ export default function WatchTowerHeroSection() {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     height: '100%',
     padding: '1rem',
   };
@@ -98,7 +98,7 @@ export default function WatchTowerHeroSection() {
   };
 
   const mainButtonStyle = {
-    // marginTop: '2rem',
+    marginTop: '1.2rem',
     background: '#92f5ad',
     border: 'none',
     borderRadius: '30px',
@@ -163,7 +163,7 @@ export default function WatchTowerHeroSection() {
         </div>
         <div
           style={{
-            marginTop: '2rem',
+            marginTop: '1rem',
             background: '#111',
             borderRadius: '12px',
             padding: '0.8rem 1.2rem',
