@@ -5,7 +5,7 @@ import logoIcon from '../assets/icon/favicon.ico';
 import groupIcon from '../assets/icon/Group.png';
 import navIcon from '../assets/icon/Icon.png';
 import { useNavigate } from 'react-router-dom';
-import LoginModal from './loginmodal';
+import LoginModal from './Loginmodal';
 import JunoChatModal from './JunoChatModal';
 
 export default function Navbar() {
