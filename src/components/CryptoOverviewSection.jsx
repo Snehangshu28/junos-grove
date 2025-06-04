@@ -300,15 +300,17 @@ export default function CryptoOverviewSection() {
 
             <button
               style={{
-                background: 'rgba(108, 207, 89, 1)',
-                color: 'black',
-                padding: '0.8rem 1.5rem',
-                border: 'none',
-                borderRadius: '0.9rem',
-                fontSize: '1.2rem',
-                cursor: 'pointer',
-                marginTop: '1.6rem',
+                marginTop: '1.2rem',
                 width: '40%',
+                background: '#92f5ad',
+                border: 'none',
+                borderRadius: '30px',
+                padding: '0.8rem 2.5rem',
+                fontSize: '1rem',
+                fontWeight: 'bold',
+                color: '#000',
+                cursor: 'pointer',
+                boxShadow: '0 0 20px rgba(146, 245, 173, 0.5)',
               }}
             >
               Connect Portfolio
