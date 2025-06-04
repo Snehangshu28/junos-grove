@@ -82,6 +82,7 @@ export default function CoinPreview() {
           zIndex: 2,
           maxWidth: '1200px',
           margin: '0 auto',
+          width: '80vw',
         }}
       >
         {/* Tabs */}

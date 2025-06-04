@@ -1,6 +1,8 @@
 import React from 'react';
 import WatchTowerHeroSection from '../components/WatchTowerHeroSection';
 import CoinPreview from '../components/CoinPreview';
+import CryptoOverviewSection from '../components/CryptoOverviewSection';
+import FAQAccordion from '../components/FAQAccordion';
 
 function WatchtowerPage() {
   return (
@@ -19,6 +21,8 @@ function WatchtowerPage() {
     >
       <WatchTowerHeroSection />
       <CoinPreview />
+      <CryptoOverviewSection />
+      <FAQAccordion />
     </div>
   );
 }
