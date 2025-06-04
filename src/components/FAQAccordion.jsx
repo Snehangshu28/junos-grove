@@ -104,7 +104,6 @@ export default function FAQAccordion() {
               marginBottom: 12,
               background: 'rgba(20, 40, 35, 1)',
               borderRadius: 20,
-              // overflow: 'hidden',
               boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
             }}
           >
@@ -125,9 +124,21 @@ export default function FAQAccordion() {
                 borderBottom:
                   open === i ? '1px solid #4ade80' : '1px solid #222',
                 transition: 'border 0.2s',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
               }}
             >
-              {faq.q}
+              <span>{faq.q}</span>
+              <span
+                style={{
+                  color: '#4ade80',
+                  fontWeight: 'bold',
+                  fontSize: '1.5rem',
+                }}
+              >
+                {open === i ? '-' : '+'}
+              </span>
             </button>
             {open === i && (
               <div
@@ -135,19 +146,9 @@ export default function FAQAccordion() {
                   padding: '1rem 1.5rem',
                   color: '#a7f3d0',
                   background: '#1a2a23',
-                  display: 'flex',
                 }}
               >
-                <span>{faq.a}</span>
-                <span
-                  style={{
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '1.5rem',
-                  }}
-                >
-                  +
-                </span>
+                {faq.a}
               </div>
             )}
           </div>
