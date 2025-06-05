@@ -5,6 +5,7 @@ import Leaderboard from '../components/Leaderboard';
 import AppPreview from '../components/AppPreview';
 import FAQAccordion from '../components/FAQAccordion';
 import DashboardHeader from '../components/DashboardHeader';
+import TreasureMapJourney from '../components/TreasureMapJourney';
 
 function TreasureMapPage() {
   return (
@@ -22,6 +23,7 @@ function TreasureMapPage() {
       }}
     >
       <DashboardHeader />
+      <TreasureMapJourney />
     </div>
   );
 }
