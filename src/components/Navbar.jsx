@@ -1,11 +1,10 @@
 import React, { use, useState } from 'react';
 import { FaCog } from 'react-icons/fa'; // FontAwesome settings icon
-import { FaUserCircle } from 'react-icons/fa'; // Profile/Notification icon
 import logoIcon from '../assets/icon/favicon.ico';
 import groupIcon from '../assets/icon/Group.png';
 import navIcon from '../assets/icon/Icon.png';
 import { useNavigate } from 'react-router-dom';
-import LoginModal from './Loginmodal';
+import LoginModal from './LoginModal';
 import JunoChatModal from './JunoChatModal';
 
 export default function Navbar() {
