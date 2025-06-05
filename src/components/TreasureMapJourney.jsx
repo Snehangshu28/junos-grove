@@ -66,6 +66,9 @@ export default function TreasureMapJourney() {
       <img src={jungleBgRight} className="jungle-bg right" alt="" />
 
       <div className="timeline-header">
+        <p>
+          Featured <span style={{ color: 'green' }}>crypto coins</span>
+        </p>
         <h2>Treasure Map Journey</h2>
       </div>
 
@@ -90,6 +93,24 @@ export default function TreasureMapJourney() {
           ))}
         </div>
       </div>
+      <button
+        style={{
+          background: '#90ee90',
+          color: '#000',
+          border: 'none',
+          padding: '0.5rem 1rem',
+          borderRadius: '37px',
+          fontWeight: 600,
+          cursor: 'pointer',
+          marginBottom: '1rem',
+          marginTop: '4rem',
+          height: '10vh',
+          width: '20vw',
+          fontSize: '1.5rem',
+        }}
+      >
+        View Portfolio
+      </button>
     </section>
   );
 }
