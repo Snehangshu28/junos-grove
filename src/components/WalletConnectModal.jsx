@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import binanceLogo from '../assets/icon/binance.png';
 import metamaskLogo from '../assets/icon/metamask.png';
 import coinbaseLogo from '../assets/icon/coinbase.png';
 import otherLogo from '../assets/icon/other.png';
+import WalletConnectModals from './WalletConnectModals';
 
 export default function WalletConnectModal({ onClose }) {
+  const [showModal, setShowModal] = useState(false);
+  console.log('showModal', showModal);
+
   const overlayStyle = {
     position: 'fixed',
     top: 0,
@@ -89,7 +93,7 @@ export default function WalletConnectModal({ onClose }) {
 
   return (
     <div style={overlayStyle} onClick={onClose}>
-      <div style={modalStyle}>
+      <div style={modalStyle} onClick={(e) => e.stopPropagation()}>
         <div
           style={{
             position: 'absolute',
@@ -134,16 +138,22 @@ export default function WalletConnectModal({ onClose }) {
             <p style={{ fontSize: '0.7rem' }}>Coinbase (Individual)</p>
             <button style={connectButtonStyle}>Connect→</button>
           </div>
-          <div style={cardStyle}>
+          <div style={cardStyle} onClick={() => setShowModal(true)}>
             <img src={otherLogo} alt="Other" style={imageStyle} />
             <p style={{ fontSize: '0.7rem' }}>Other</p>
-            <button style={connectButtonStyle}>Connect→</button>
+            <button
+              style={connectButtonStyle}
+              onClick={() => setShowModal(true)}
+            >
+              Connect→
+            </button>
           </div>
         </div>
         {/* <button style={closeButtonStyle} onClick={onClose}>
           ×
         </button> */}
       </div>
+      {showModal && <WalletConnectModals onClose={() => setShowModal(false)} />}
     </div>
   );
 }

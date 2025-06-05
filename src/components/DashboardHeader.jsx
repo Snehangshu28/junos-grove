@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import chartImg from '../assets/chart.png';
 import otherImg from '../assets/icon/other.png';
+import WalletConnectModals from './WalletConnectModals';
 
 export default function DashboardHeader() {
+  const [showWalletModal, setShowWalletModal] = useState(false);
   return (
     <div style={{ width: '100%', background: '#000', color: '#fff' }}>
       {/* Add Navbar at the top */}
@@ -98,7 +100,7 @@ export default function DashboardHeader() {
         <div
           style={{
             background: '#1a1a1a',
-            padding: '1.25rem',
+            padding: '0.6rem',
             borderRadius: '12px',
             width: '333px',
             display: 'flex',
@@ -114,6 +116,7 @@ export default function DashboardHeader() {
             <button
               style={{
                 background: '#90ee90',
+                color: '#000',
                 border: 'none',
                 padding: '0.5rem 1rem',
                 borderRadius: '8px',
@@ -121,6 +124,7 @@ export default function DashboardHeader() {
                 cursor: 'pointer',
                 marginBottom: '1rem',
               }}
+              onClick={() => setShowWalletModal(true)}
             >
               Connect Portfolio
             </button>
@@ -128,20 +132,24 @@ export default function DashboardHeader() {
           <div
             style={{
               //   background: '#2a2a2a',
-              padding: '0.75rem',
+              // padding: '0.75rem',
               borderRadius: '8px',
               width: '100%',
+              height: '100%',
               textAlign: 'center',
             }}
           >
             <img
               src={otherImg} // Replace with actual image URL
               alt="Portfolio Icon"
-              style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+              style={{ width: '100px', height: '100px', objectFit: 'cover' }}
             />
           </div>
         </div>
       </div>
+      {showWalletModal && (
+        <WalletConnectModals onClose={() => setShowWalletModal(false)} />
+      )}
     </div>
   );
 }

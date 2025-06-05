@@ -18,34 +18,41 @@ export default function TreasureMapJourney() {
     const ctx = gsap.context(() => {
       const timeline = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
-      // Animate the line fill
-      timeline.to('.line-fill', {
-        scaleX: 1,
-        duration: 2,
-        transformOrigin: 'left center',
-      });
-
-      // Animate checkpoints one by one
+      // Animate the line fill in segments and reveal checkpoints one by one
       data.forEach((_, index) => {
+        // Calculate the scaleX for each checkpoint (from 0 to 1)
+        const scaleX = (index + 1) / data.length;
+
+        // Animate the line up to this checkpoint
+        timeline.to(
+          '.line-fill',
+          {
+            scaleX: scaleX,
+            duration: 0.5,
+            transformOrigin: 'left center',
+          },
+          index === 0 ? 0 : '+=0.2'
+        );
+
+        // Reveal the checkpoint and text
         timeline.to(
           `.checkpoint-${index}`,
           {
             scale: 1,
             opacity: 1,
-            duration: 0.6,
+            duration: 0.5,
             ease: 'back.out(1.7)',
           },
-          `-=${index === 0 ? 1 : 0.7}`
+          '-=0.3'
         );
-
         timeline.to(
           `.text-${index}`,
           {
             opacity: 1,
             y: 0,
-            duration: 0.5,
+            duration: 0.4,
           },
-          '-=0.4'
+          '-=0.3'
         );
       });
     }, containerRef);

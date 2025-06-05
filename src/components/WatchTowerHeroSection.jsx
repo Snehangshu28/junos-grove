@@ -6,6 +6,7 @@ import binanceLogo from '../assets/icon/binance.png';
 import metamaskLogo from '../assets/icon/metamask.png';
 import coinbaseLogo from '../assets/icon/coinbase.png';
 import otherLogo from '../assets/icon/other.png';
+import WalletConnectModals from './WalletConnectModals';
 
 export default function WatchTowerHeroSection() {
   const [animate, setAnimate] = useState(false);
@@ -196,7 +197,7 @@ export default function WatchTowerHeroSection() {
           Connect Portfolio
         </button>
       </div>
-      {showModal && <WalletConnectModal onClose={() => setShowModal(false)} />}
+      {showModal && <WalletConnectModals onClose={() => setShowModal(false)} />}
     </div>
   );
 }
