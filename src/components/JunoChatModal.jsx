@@ -1,6 +1,6 @@
 import React from 'react';
-import leftImage from '../assets/left.png';
-import rightImage from '../assets/right.png';
+import leftImage from '../assets/Left.png';
+import rightImage from '../assets/Right.png';
 
 export default function JunoChatModal({ onClose }) {
   return (
