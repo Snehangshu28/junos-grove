@@ -9,7 +9,7 @@ export default function DashboardHeader() {
   return (
     <div style={{ width: '100%', background: '#000', color: '#fff' }}>
       {/* Add Navbar at the top */}
-      <Navbar />
+      {/* <Navbar /> */}
       <div
         style={{
           display: 'flex',

@@ -3,6 +3,7 @@ import './TreasureMapJourney.css';
 import jungleBgLeft from '../assets/Left.png';
 import jungleBgRight from '../assets/Right.png';
 import { gsap } from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
 const data = [
   { year: 2019, text: 'Sunt nostrud amet sint do', position: 'bottom' },
@@ -13,6 +14,7 @@ const data = [
 ];
 
 export default function TreasureMapJourney() {
+  const navigate = useNavigate();
   const containerRef = useRef();
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -108,6 +110,7 @@ export default function TreasureMapJourney() {
           width: '20vw',
           fontSize: '1.5rem',
         }}
+        onClick={() => navigate('/portfolio')}
       >
         View Portfolio
       </button>

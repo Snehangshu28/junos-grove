@@ -16,6 +16,7 @@ import Home from './page/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import WatchtowerPage from './page/WatchtowerPage';
 import TreasureMapPage from './page/TreasureMapPage';
+import Portfolio from './page/Portfolio';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/watchtower" element={<WatchtowerPage />} />
         <Route path="/treasure-map" element={<TreasureMapPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
       <Footer />
     </BrowserRouter>

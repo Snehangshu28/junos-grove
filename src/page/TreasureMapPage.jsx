@@ -6,6 +6,7 @@ import AppPreview from '../components/AppPreview';
 import FAQAccordion from '../components/FAQAccordion';
 import DashboardHeader from '../components/DashboardHeader';
 import TreasureMapJourney from '../components/TreasureMapJourney';
+import Navbar from '../components/Navbar';
 
 function TreasureMapPage() {
   return (
@@ -14,7 +15,8 @@ function TreasureMapPage() {
         minHeight: '100vh',
         width: '100%',
         maxWidth: '100%',
-        background: 'rgba(5, 23, 20, 1)',
+        // background: 'rgba(5, 23, 20, 1)',
+        background: '#000',
         overflow: 'hidden',
         position: 'relative',
         fontFamily: 'sans-serif',
@@ -22,6 +24,7 @@ function TreasureMapPage() {
         flexDirection: 'column',
       }}
     >
+      <Navbar />
       <DashboardHeader />
       <TreasureMapJourney />
     </div>
