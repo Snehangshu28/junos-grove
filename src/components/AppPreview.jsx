@@ -100,8 +100,8 @@ export default function AppPreview() {
         <div
           style={{
             position: 'relative',
-            width: 317,
-            height: 600,
+            // width: 317,
+            // height: 600,
             zIndex: 2,
             display: 'flex',
             alignItems: 'center',
@@ -115,8 +115,8 @@ export default function AppPreview() {
             muted
             loop
             style={{
-              width: '41vw',
-              height: '100vh',
+              width: '23vw',
+              height: '106vh',
               borderRadius: '2rem',
               objectFit: 'cover',
               boxShadow: '0 0 20px rgba(0,0,0,0.5)',

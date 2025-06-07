@@ -4,43 +4,49 @@ import jungleBg from '../assets/Left.png';
 import portfolioIcon from '../assets/icon/portfolio.png';
 import vaultIcon from '../assets/icon/vault.png';
 import mobileIcon from '../assets/icon/mobile.png';
+import bitcoinIcon from '../assets/icon/bitcoin.png';
+import EthereumIcon from '../assets/icon/Ethereum.png';
+import LitecoinIcon from '../assets/icon/Litecoin.png';
+import PolkadotIcon from '../assets/icon/Polkadot.png';
+import SolanaIcon from '../assets/icon/Solana.png';
+import ChainlinkIcon from '../assets/icon/Chainlink.png';
 
 const coins = [
   {
     title: 'Highest volume',
     name: 'Bitcoin',
     price: '693475 USD',
-    icon: 'bitcoin.png',
+    icon: bitcoinIcon,
   },
   {
     title: 'Top gainer',
     name: 'Ethereum',
     price: '333729 USD',
-    icon: 'bitcoin.png',
+    icon: EthereumIcon,
   },
   {
     title: 'New listing',
     name: 'Litecoin',
     price: '105000 USD',
-    icon: 'bitcoin.png',
+    icon: LitecoinIcon,
   },
   {
     title: 'Most traded',
     name: 'Polkadot',
     price: '68423 USD',
-    icon: 'bitcoin.png',
+    icon: PolkadotIcon,
   },
   {
     title: 'Biggest gainers',
     name: 'Solana',
     price: '19863 USD',
-    icon: 'bitcoin.png',
+    icon: SolanaIcon,
   },
   {
     title: 'Trending',
     name: 'Chainlink',
     price: '11291 USD',
-    icon: 'bitcoin.png',
+    icon: ChainlinkIcon,
   },
 ];
 
@@ -130,9 +136,9 @@ export default function CryptoLandingPage() {
                 {coin.title}
               </p>
               <img
-                src={`../assets/icon/${coin.icon}`}
+                src={coin.icon}
                 alt={coin.name}
-                style={{ width: '20px', height: '20px' }}
+                style={{ width: '37px', height: '37px' }}
               />
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600 }}>
                 {coin.name}
