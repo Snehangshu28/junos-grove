@@ -27,7 +27,53 @@
     filter: brightness(1);
   }
 }
+.juno-btn-wrapper {
+  position: relative;
+  width: 240px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.juno-btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid white;
+  transform: rotate(356deg) scale(1.05);
+  z-index: 1;
+  transition: transform 0.2s;
+  /* filter: blur(1px) brightness(0.95); */
+}
+
+.juno-btn-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(76, 222, 128, 0.15);
+  transition: background 0.2s;
+}
+
+.juno-btn-content:hover {
+  background: #3441561c;
+}
 .hero-heading {
   color: white;
   text-align: center;
@@ -81,7 +127,7 @@
 }
 .hero-btn-row-item {
   border: 2px solid white;
-  transform: rotate(6deg);
+  transform: rotate(3deg);
   border-radius: 50%;
 
 }
@@ -94,6 +140,7 @@
   font-size: 1.25em;
   margin-right: 1.2rem;
     font-family: "Bevan", serif;
+    transform: rotate(358deg)
 
 }
 .hero-btn-arrow {

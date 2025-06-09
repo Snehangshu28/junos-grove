@@ -62,17 +62,19 @@ export default function HeroSection() {
           </div>
           <div className="hero-btn-row">
             <div className="hero-btn-row">
-              <div className="hero-btn-row-item">
-                <button className="hero-btn-outline">
+              <div className="hero-btn-row-item juno-btn-wrapper">
+                <div className="juno-btn-bg"></div>
+                <button className="juno-btn-content">
                   <span className="hero-btn-label">Treasure Map</span>
                   <span className="hero-btn-arrow">→</span>
                 </button>
               </div>
-              <div className="hero-btn-row-item">
-                <div className="hero-btn-outline">
+              <div className="hero-btn-row-item juno-btn-wrapper">
+                <div className="juno-btn-bg"></div>
+                <button className="juno-btn-content">
                   <span className="hero-btn-label">Juno's Grove</span>
                   <span className="hero-btn-arrow">→</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
